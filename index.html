@@ -70,16 +70,54 @@ label{display:block;font-size:13px;font-weight:500;margin:12px 0 4px}
 .tblw{overflow-x:auto;margin-bottom:20px}.tbl{width:100%;border-collapse:collapse;font-size:14px;background:var(--card);border:1px solid var(--line);border-radius:10px}.tbl th,.tbl td{padding:9px 12px;border-top:1px solid var(--line);text-align:left}.tbl th{font-weight:600;border-top:0;color:var(--mute)}.tbl .n{text-align:right}
 .err{color:var(--bad);font-size:13px;margin:10px 0 0;min-height:1em}
 @media(max-width:760px){body{display:block}nav{width:auto;height:auto;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px}nav h2{display:none}nav .logo{display:none}nav button{width:auto;white-space:nowrap;gap:6px;background:rgba(255,255,255,.07);flex:none}main{padding-top:20px}}
+
+:root{--bg:#faf7f2;--card:#fff;--ink:#1f2430;--mute:#6b7280;--line:#ece6dc;--side:#fff;--acc:#8a5d0e;--accbg:#fbeed8}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11141b;--card:#1a1f2a;--ink:#e8eaf0;--mute:#9aa3b2;--line:#2a3140;--side:#151922;--acc:#E7A652;--accbg:#3a2d14}}
+:root[data-theme="dark"]{--bg:#11141b;--card:#1a1f2a;--ink:#e8eaf0;--mute:#9aa3b2;--line:#2a3140;--side:#151922;--acc:#E7A652;--accbg:#3a2d14}
+.app{display:flex;width:100%;min-height:100vh}.mw{flex:1;min-width:0;display:flex;flex-direction:column}.mw main{width:100%;max-width:1180px}
+#t{display:none}.head[hidden]{display:none}
+#nav{width:250px;flex:none;background:var(--side);border-right:1px solid var(--line);position:sticky;top:0;height:100vh;overflow:auto;padding:16px 12px;display:flex;flex-direction:column}
+.brand img{display:block;width:100%;max-width:210px;margin:2px auto 14px;border-radius:8px}
+:root[data-theme="dark"] .brand img{background:#fff;padding:4px}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand img{background:#fff;padding:4px}}
+.sec{font-size:11px;letter-spacing:.1em;color:var(--mute);margin:12px 10px 6px;font-weight:600}
+.ni{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:10px;width:100%;padding:9px 10px;border-radius:8px;cursor:pointer;font-size:14px;color:var(--ink)}
+.ni:hover{background:var(--accbg)}.ni[aria-pressed=true]{background:var(--accbg);color:var(--acc);font-weight:600}.nl{flex:1}.nc{font-size:12px;color:var(--mute)}
+.ic{width:18px;height:18px;flex:none}
+.nfoot{margin-top:auto;padding-top:12px;border-top:1px solid var(--line)}.off{display:flex;gap:8px;align-items:center;font-size:13px;padding:6px 10px;color:var(--mute)}
+.usr{display:flex;gap:10px;align-items:center;padding:8px 10px}.av{width:32px;height:32px;border-radius:50%;background:var(--accbg);color:var(--acc);display:grid;place-items:center;font-weight:600;flex:none}
+.un{display:flex;flex-direction:column;min-width:0}.un b{font-size:13px}.un small{color:var(--mute);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;align-items:center;gap:8px;padding:10px 20px;background:var(--card);border-bottom:1px solid var(--line)}
+.ttl{font-size:15px;margin-left:4px}.sp{flex:1}
+.ib{all:unset;box-sizing:border-box;width:36px;height:36px;border-radius:8px;display:grid;place-items:center;cursor:pointer;color:var(--ink);flex:none}.ib:hover{background:var(--accbg)}.ib svg{width:19px;height:19px}
+.gs{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:0 10px;background:var(--bg);min-width:260px;color:var(--mute)}.gs svg{width:16px;height:16px;flex:none}
+.gs input{border:0;background:transparent;padding:8px 0;width:100%}.gs input:focus-visible{outline:none}.gs:focus-within{outline:2px solid var(--acc)}
+.gs kbd{font:inherit;font-size:11px;border:1px solid var(--line);border-radius:4px;padding:1px 5px;white-space:nowrap}
+.nw{position:relative}.menu{position:absolute;right:0;top:44px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px;min-width:190px;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:10}.menu[hidden]{display:none}
+.menu button{all:unset;box-sizing:border-box;display:block;width:100%;padding:9px 10px;border-radius:6px;cursor:pointer;font-size:14px}.menu button:hover{background:var(--accbg)}
+.sh{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--mute);margin:28px 0 14px}.sh i{width:3px;height:16px;border-radius:2px;display:inline-block}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+.tool{all:unset;box-sizing:border-box;display:flex;gap:14px;align-items:flex-start;padding:18px;background:var(--card);border:1px solid var(--line);border-radius:14px;cursor:pointer;position:relative;min-height:104px}
+.tool:hover{border-color:var(--acc);box-shadow:0 2px 12px rgba(0,0,0,.06)}.tool[disabled]{opacity:.65;cursor:default}.tool[disabled]:hover{border-color:var(--line);box-shadow:none}
+.ti{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;flex:none;background:color-mix(in srgb,var(--c) 14%,var(--card));color:var(--c)}.ti svg{width:22px;height:22px}
+.tx{display:flex;flex-direction:column;gap:4px;min-width:0}.tx b{font-size:16px;font-weight:600}.tx span{color:var(--mute);font-size:14px}
+.bd{position:absolute;top:-10px;right:14px;font-style:normal;font-size:11px;background:var(--card);color:var(--mute);border:1px solid var(--line);padding:1px 8px;border-radius:999px}
+.btn.on{background:var(--accbg);color:var(--acc);border-color:var(--acc)}
+.card,.stat,.box,.tbl{border-radius:14px}
+h3,.stat b,#gate h3{font-family:inherit}h3{font-size:17px}.stat b{font-size:22px}
+.ov{display:none}
+@media(min-width:861px){.app.col #nav{display:none}}
+@media(max-width:860px){#nav{position:fixed;left:0;top:0;bottom:0;z-index:30;height:auto;transform:translateX(-100%);transition:transform .2s}.app.open #nav{transform:none;box-shadow:0 0 30px rgba(0,0,0,.25)}.sp{display:none}.app.open~.ov{display:block;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:20}.gs{min-width:0;flex:1}.gs kbd,.ib.opt{display:none}.top{padding:8px 12px}}
 </style>
 </head>
 <body>
-<nav id="nav" aria-label="Módulos"></nav>
+<div class="app" id="app"><aside id="nav" aria-label="Menu"></aside><div class="mw"><header class="top" id="top"></header>
 <main>
-<div class="head"><div><h1 id="t"></h1><p class="sub"><span id="s"></span> <span id="st"></span></p></div><div id="act"></div></div>
+<div class="head" id="hd"><div><h1 id="t"></h1><p class="sub"><span id="s"></span> <span id="st"></span></p></div><div id="act"></div></div>
 <div id="msg" role="status"></div>
 <div class="filters" id="flt" hidden><input type="search" id="q" placeholder="Buscar por nome, CPF, tipo ou andamento" aria-label="Buscar"><select id="fs" aria-label="Filtrar por situação"></select><select id="fr" aria-label="Filtrar por responsável"></select></div>
 <div id="c"></div>
-</main>
+</main></div></div><div class="ov" id="ov"></div><input id="imp" type="file" accept=".xlsx,.xls" hidden>
 <dialog id="gate"><img class="hero" alt="Flavio Junior Advocacia" id="gl"><h3>Acesso restrito</h3><p class="sub" id="g_hint"></p>
 <div id="g_acc"><label for="g_email">E-mail</label><input id="g_email" type="email" autocomplete="username"><label for="g_pw">Senha de acesso</label><input id="g_pw" type="password" autocomplete="current-password"></div>
 <label for="g_key">Senha de criptografia</label><input id="g_key" type="password" autocomplete="off">
@@ -94,7 +132,9 @@ const E={
 cases:{n:"Processos",s:"processo",f:[["nome","Nome do cliente","text",1,"names"],["tipo","Tipo de demanda","text",0,"tipos"],["sit","Situação processual","text",0,"sits"],["cpf","CPF","text"],["senha","Senha GOV","password"],["valor","Valor dos honorários (R$)","number"],["resp","Responsável","text",0,"resps"],["tel","WhatsApp com DDD","tel"],["obs","Andamento e observações","textarea"]]},
 fees:{n:"Financeiro",s:"lançamento",f:[["nome","Nome do cliente","text",1,"names"],["total","Valor total (R$)","number"],["parc","Parcelas","number"],["pago","Valor já pago (R$)","number"],["dia","Data do próximo pagamento","date"]]},
 tasks:{n:"Agenda",s:"compromisso",f:[["titulo","Descrição","text",1],["tipo","Tipo","select",0,TIPOS],["data","Data limite","date",1],["caso","Cliente e processo","refcase"],["pri","Prioridade","select",0,PRI],["resp","Responsável","text",0,"resps"]]}};
-const NAV=[["home","Painel"],["cases","Processos"],["fees","Financeiro"],["tasks","Agenda"],["rep","Relatórios"]];
+const NAV=[["home","Área de trabalho","home"],["cases","Processos","briefcase"],["fees","Financeiro","wallet"],["tasks","Agenda","calendar"],["rep","Controladoria","chart"]],TT={home:"Área de trabalho",cases:"Processos",fees:"Financeiro",tasks:"Agenda",rep:"Controladoria"};
+const I={home:'<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',briefcase:'<rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',wallet:'<path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/>',calendar:'<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>',chart:'<path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>',file:'<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/>',clip:'<rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>',scissors:'<circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/>',layers:'<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>',image:'<rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>',building:'<rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/>',upload:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/>',download:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>',lock:'<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>',moon:'<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>',search:'<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',panel:'<rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/>',list:'<path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/>'};
+const ico=n=>`<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg>`;
 let S={cases:[],fees:[],tasks:[]},V="home",TV="list",MM=0,Q="",FS="",FR="",ED=null,DOCS={},ready=false,q=Promise.resolve();
 const $=i=>document.getElementById(i);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -115,7 +155,7 @@ function dl(key){const f=key=="names"?"nome":key=="tipos"?"tipo":key=="sits"?"si
 function status(t){$("st").textContent="· "+t}
 function msg(t,bad){$("msg").innerHTML=t?`<p class="msg${bad?" bad":""}">${esc(t)}</p>`:""}
 const SB_URL="https://fmzeqfxqojmebsqlvjjp.supabase.co",SB_KEY="sb_publishable_yzhx3VG4_W-TvpR-bubUJg_6Hv4C8m2";
-let sb=null,KEY=null,UID=null,idle=null;
+let sb=null,KEY=null,UID=null,idle=null,EMAIL="";
 const b64=u=>{let s="";for(let i=0;i<u.length;i+=8192)s+=String.fromCharCode.apply(null,u.subarray(i,i+8192));return btoa(s)},ub=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
 const mkKey=async(p,salt)=>{const m=await crypto.subtle.importKey("raw",new TextEncoder().encode(p),"PBKDF2",false,["deriveKey"]);return crypto.subtle.deriveKey({name:"PBKDF2",salt,iterations:300000,hash:"SHA-256"},m,{name:"AES-GCM",length:256},false,["encrypt","decrypt"])};
 const enc=async o=>{const iv=crypto.getRandomValues(new Uint8Array(12));return{iv:b64(iv),ct:b64(new Uint8Array(await crypto.subtle.encrypt({name:"AES-GCM",iv},KEY,new TextEncoder().encode(JSON.stringify(o)))))}};
@@ -132,7 +172,7 @@ $("g_out").onclick=async()=>{await sb.auth.signOut();location.reload()};
 $("g_go").onclick=async()=>{const err=$("g_err"),go=$("g_go");err.textContent="";go.disabled=true;
 try{let {data:{session}}=await sb.auth.getSession();
 if(!session){const r=await sb.auth.signInWithPassword({email:$("g_email").value.trim(),password:$("g_pw").value});if(r.error)throw new Error("E-mail ou senha de acesso incorretos.");session=r.data.session}
-UID=session.user.id;const rows=await sb.from("dados").select("chave,conteudo").eq("user_id",UID);if(rows.error)throw new Error("Não foi possível ler os dados. Confira o schema.sql no Supabase.");
+UID=session.user.id;EMAIL=session.user.email||"";const rows=await sb.from("dados").select("chave,conteudo").eq("user_id",UID);if(rows.error)throw new Error("Não foi possível ler os dados. Confira o schema.sql no Supabase.");
 const map=Object.fromEntries(rows.data.map(r=>[r.chave,r.conteudo])),pass=$("g_key").value;if(!pass)throw new Error("Digite a senha de criptografia.");
 if(map.salt){KEY=await mkKey(pass,ub(map.salt.salt));try{for(const k of KEYS)if(map[k])S[k]=await dec(map[k])}catch(e){KEY=null;throw new Error("Senha de criptografia incorreta.")}}
 else{if($("g_key2w").hidden){$("g_key2w").hidden=false;throw new Error("Primeiro acesso: crie a senha de criptografia e repita no campo abaixo. Ela não pode ser recuperada se for perdida.")}
@@ -148,9 +188,10 @@ XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet([["Cliente","Data","Anda
 XLSX.writeFile(wb,"backup-flavio-junior-"+today()+".xlsx");msg("Backup baixado. Ele contém CPFs e senhas sem criptografia: guarde em local seguro.")}
 const cnt=k=>k=="cases"?S.cases.length:k=="fees"?S.fees.filter(f=>saldo(f)>0).length:k=="tasks"?S.tasks.filter(t=>!t.done).length:"";
 function render(){
-$("nav").innerHTML='<img class="logo" alt="Flavio Junior Advocacia" src="'+LOGO_V+'">'+NAV.map(([k,n])=>`<button data-v="${k}" aria-pressed="${V==k}">${n}<span>${cnt(k)}</span></button>`).join("")+'<button data-lock style="margin-top:14px">Bloquear e sair</button>';
+$("nav").innerHTML=`<div class="brand"><img alt="Flavio Junior Advocacia" src="${LOGO_H}"></div><div class="sec">FERRAMENTAS</div>`+NAV.map(([k,n,ic])=>`<button class="ni" data-v="${k}" aria-pressed="${V==k}">${ico(ic)}<span class="nl">${n}</span><span class="nc">${cnt(k)}</span></button>`).join("")+`<div class="nfoot"><div class="off">${ico("building")}<span>Flavio Junior Advocacia</span></div><div class="usr"><span class="av">F</span><span class="un"><b>Flavio Junior</b><small>${esc(EMAIL)}</small></span></div><button class="ni" data-lock>${ico("lock")}<span class="nl">Bloquear e sair</span></button></div>`;
+$("tt").textContent=TT[V];$("hd").hidden=V=="home";
 $("t").textContent=V=="home"?"Painel do escritório":V=="rep"?"Relatórios":E[V].n;
-$("act").innerHTML=(V=="home"||V=="rep"?"":`<button class="btn main" data-new="${V}">Novo ${E[V].s}</button>`)+(V=="tasks"||V=="rep"?"":'<label class="btn" for="imp">Importar planilha</label><input id="imp" type="file" accept=".xlsx,.xls" hidden><button class="btn" data-exp>Exportar planilha</button>');
+$("act").innerHTML=(V=="home"||V=="rep"?"":`<button class="btn main" data-new="${V}">Novo ${E[V].s}</button>`)+(V=="tasks"||V=="rep"?"":'<label class="btn" for="imp">Importar planilha</label><button class="btn" data-exp>Exportar planilha</button>');
 $("flt").hidden=V=="home"||V=="rep";$("fs").hidden=$("fr").hidden=V!="cases";
 if(!ready){$("c").innerHTML='<p class="empty">Carregando seus dados...</p>';return}
 if(V=="home"){$("s").textContent="Hoje, "+dd(today());$("c").innerHTML=home();return}
@@ -175,10 +216,38 @@ return`<article class="card${cls}"><span class="tag ${tc}">${esc(tag)}</span><h3
 function home(){const h=today();
 const op=S.tasks.filter(t=>!t.done).sort((a,b)=>a.data.localeCompare(b.data)),late=op.filter(t=>t.data<h).length,prox=op.filter(t=>t.data>=h&&diff(t.data)<=7).length;
 const open=S.fees.filter(f=>saldo(f)>0),vc=open.filter(f=>f.dia&&f.dia<h).sort((a,b)=>a.dia.localeCompare(b.dia));
-const st=[["Processos",S.cases.length],["Prazos atrasados",late,late],["Prazos nos próximos 7 dias",prox],["Total contratado",brl(sum(S.fees,tot))],["Recebido",brl(sum(S.fees,pg))],["A receber",brl(sum(S.fees,saldo))],["Vencido",brl(sum(vc,saldo)),vc.length]];
+const st=[["Processos",S.cases.length],["Prazos atrasados",late,late],["Próximos 7 dias",prox],["Total contratado",brl(sum(S.fees,tot))],["Recebido",brl(sum(S.fees,pg))],["A receber",brl(sum(S.fees,saldo))],["Vencido",brl(sum(vc,saldo)),vc.length]];
 const gl=(a,att)=>a.length?"<ul>"+a.slice(0,10).map(g=>`<li><button class="lk" ${att}="${esc(g.k)}"><span>${esc(g.l)}</span><b>${g.n}</b></button></li>`).join("")+"</ul>":'<p class="empty">Sem dados ainda.</p>';
-const empty=!S.cases.length?`<div class="box" style="margin-bottom:18px"><h3>Comece por aqui</h3><p class="sub" style="margin:6px 0 12px">Importe sua planilha de controle processual ou cadastre o primeiro processo. A importação é feita no seu navegador e vai direto para a sua conta.</p><label class="btn main" for="imp">Importar planilha</label> <button class="btn" data-new="cases">Novo processo</button></div>`:"";
-return `<img class="hero" alt="Flavio Junior Advocacia" src="${LOGO_H}">`+empty+`<div class="stats">${st.map(([n,v,b])=>`<div class="stat${b?" bad":""}"><b>${v}</b><span>${n}</span></div>`).join("")}</div><div class="two"><div class="box"><h3>Processos por situação</h3>${gl(groups("sit"),"data-fsit")}</div><div class="box"><h3>Processos por responsável</h3>${gl(groups("resp"),"data-fresp")}</div><div class="box"><h3>Próximos compromissos</h3>${op.length?"<ul>"+op.slice(0,6).map(t=>`<li><b>${esc(t.titulo)}</b><span>${esc(t.tipo||"Tarefa")} · ${dd(t.data)} · ${when(t.data)}${t.caso?" · "+esc(caseLabel(t.caso)):""}</span></li>`).join("")+"</ul>":'<p class="empty">Nenhum prazo em aberto.</p>'}</div><div class="box"><h3>Pagamentos vencidos</h3>${vc.length?"<ul>"+vc.slice(0,6).map(f=>`<li><b>${esc(f.nome)} · ${brl(saldo(f))}</b><span>${dd(f.dia)} · ${when(f.dia)}</span></li>`).join("")+"</ul>":'<p class="empty">Nenhum pagamento vencido.</p>'}</div>${stale()}</div>`}
+const empty=!S.cases.length?`<div class="box" style="margin-bottom:18px"><h3>Comece por aqui</h3><p class="sub" style="margin:6px 0 12px">Importe sua planilha de controle processual ou cadastre o primeiro processo. A importação é feita no seu navegador e os dados são criptografados antes de serem salvos.</p><label class="btn main" for="imp">Importar planilha</label> <button class="btn" data-new="cases">Novo processo</button></div>`:"";
+const sec=(c,t)=>`<div class="sh"><i style="background:${c}"></i>${t}</div>`,soon="Em breve";
+const tool=(ic,c,t,d,at,bd)=>`<button class="tool" ${at||"disabled"}><span class="ti" style="--c:${c}">${ico(ic)}</span><span class="tx"><b>${t}</b><span>${d}</span></span>${bd?`<em class="bd">${bd}</em>`:""}</button>`;
+return empty+`<div class="stats">${st.map(([n,v,b])=>`<div class="stat${b?" bad":""}"><b>${v}</b><span>${n}</span></div>`).join("")}</div>`
++sec("#E7A652","FERRAMENTAS PRINCIPAIS")+'<div class="tools">'
++tool("briefcase","#e8803a","Processos","Clientes, CPF e senha GOV, andamentos e lista de documentos de cada processo",'data-v="cases"')
++tool("wallet","#16a34a","Financeiro","Honorários, valores recebidos, saldo e cobrança por WhatsApp",'data-v="fees"')
++tool("calendar","#2563eb","Agenda e atividades","Prazos, audiências, perícias e reuniões, em lista ou calendário",'data-v="tasks"')
++tool("chart","#4f46e5","Controladoria","Totais por responsável e por tipo de demanda",'data-v="rep"')
++tool("file","#9333ea","Robô gerador de documentos","Procuração e contrato de honorários preenchidos com os dados do cliente","",soon)
++tool("clip","#7c3aed","Modelos","Modelos de contrato, procuração e peças do escritório","",soon)+"</div>"
++sec("#dc2626","VISÃO GERAL")+`<div class="two"><div class="box"><h3>Processos por situação</h3>${gl(groups("sit"),"data-fsit")}</div><div class="box"><h3>Processos por responsável</h3>${gl(groups("resp"),"data-fresp")}</div><div class="box"><h3>Próximos compromissos</h3>${op.length?"<ul>"+op.slice(0,6).map(t=>`<li><b>${esc(t.titulo)}</b><span>${esc(t.tipo||"Tarefa")} · ${dd(t.data)} · ${when(t.data)}${t.caso?" · "+esc(caseLabel(t.caso)):""}</span></li>`).join("")+"</ul>":'<p class="empty">Nenhum compromisso em aberto.</p>'}</div><div class="box"><h3>Pagamentos vencidos</h3>${vc.length?"<ul>"+vc.slice(0,6).map(f=>`<li><b>${esc(f.nome)} · ${brl(saldo(f))}</b><span>${dd(f.dia)} · ${when(f.dia)}</span></li>`).join("")+"</ul>":'<p class="empty">Nenhum pagamento vencido.</p>'}</div>${stale()}</div>`
++sec("#8b5cf6","OUTRAS FERRAMENTAS")+'<div class="tools">'
++tool("layers","#7c3aed","Juntar PDFs","Junte vários PDFs em um único arquivo","",soon)
++tool("scissors","#7c3aed","Dividir PDFs","Divida PDFs por tamanho ou número de páginas","",soon)
++tool("image","#7c3aed","Converter imagens em PDFs","Converta imagens (JPG, PNG) em PDF","",soon)+"</div>"
++sec("#f59e0b","GESTÃO DO ESCRITÓRIO")+'<div class="tools">'
++tool("upload","#d97706","Importar planilha","Traga clientes e financeiro de uma planilha Excel (.xlsx)",'data-imp')
++tool("download","#d97706","Exportar planilha","Baixe um backup em Excel de processos, financeiro e andamentos",'data-exp')
++tool("lock","#d97706","Bloquear e sair","Encerre a sessão e proteja os dados do escritório",'data-lock')
++tool("building","#d97706","Meu escritório","Dados, telefones e papel timbrado do escritório","",soon)+"</div>"}
+function themeDark(){const t=document.documentElement.dataset.theme;return t?t=="dark":matchMedia("(prefers-color-scheme:dark)").matches}
+function themeIcon(){$("th").innerHTML=ico(themeDark()?"sun":"moon")}
+function setupTop(){try{const t=localStorage.getItem("tema");if(t)document.documentElement.dataset.theme=t}catch(e){}
+$("top").innerHTML=`<button class="ib" id="tg" aria-label="Mostrar ou ocultar o menu">${ico("panel")}</button><b class="ttl" id="tt"></b><span class="sp"></span><button class="ib opt" id="th" aria-label="Alternar entre tema claro e escuro"></button><button class="ib opt" data-gocal aria-label="Abrir calendário">${ico("calendar")}</button><button class="ib opt" data-v="tasks" aria-label="Abrir atividades">${ico("list")}</button><div class="gs">${ico("search")}<input id="gs" type="search" placeholder="Pesquisar processos..." aria-label="Pesquisar processos"><kbd>Ctrl K</kbd></div><div class="nw"><button class="btn main" id="nb">+ Novo ▾</button><div class="menu" id="nm" hidden><button data-new="cases">Novo processo</button><button data-new="fees">Novo lançamento</button><button data-new="tasks">Novo compromisso</button></div></div>`;
+themeIcon();
+$("gs").oninput=e=>{Q=e.target.value.toLowerCase();if(V!="cases"){V="cases";FS=FR=""}$("q").value=e.target.value;render()};
+addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()=="k"){e.preventDefault();$("gs").focus()}});
+$("ov").onclick=()=>$("app").classList.remove("open")}
+function toggleTheme(){const n=themeDark()?"light":"dark";document.documentElement.dataset.theme=n;try{localStorage.setItem("tema",n)}catch(e){}themeIcon()}
 const lastAnd=c=>(c.and||[]).reduce((m,a)=>a.d>m?a.d:m,"");
 function lastLine(r){const l=lastAnd(r);if(!l)return"";const a=r.and.filter(x=>x.d==l).pop(),days=-diff(l);return"Último andamento: "+dd(l)+" · "+a.t+(days>=30?" (parado há "+days+" dias)":"")}
 const docLine=r=>r.docs&&r.docs.length?"Documentos: "+r.docs.filter(d=>d.ok).length+" de "+r.docs.length:"";
@@ -229,12 +298,13 @@ const c=B?{nome,tipo:t(r[1]),sit:up(r[2]),valor:num(r[3]),cpf:t(r[4]),senha:t(r[
 const k=keyOf(c),e=idx.get(k);if(e){let ch=0;for(const f in c)if((e[f]===""||e[f]==null)&&c[f]!==""){e[f]=c[f];ch=1}ch?mg++:sk++;return}
 c.id=uid();S.cases.push(c);idx.set(k,c);nc++})}}
 KEYS.slice(0,2).forEach(save);render();msg(`Importação concluída: ${nc} processos novos, ${nf} lançamentos financeiros, ${mg} registros completados com dados de outra aba e ${sk} já existentes ignorados.`)}catch(e){msg("Não consegui ler esse arquivo. Confirme que é uma planilha .xlsx.",1)}}
-document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+document.addEventListener("click",e=>{if(!e.target.closest(".nw"))$("nm").hidden=true;const b=e.target.closest("button");if(!b)return;
+if(b.id=="tg"){const a=$("app");a.classList.toggle(innerWidth>860?"col":"open");return}if(b.id=="th"){toggleTheme();return}if(b.id=="nb"){$("nm").hidden=!$("nm").hidden;return}if("imp" in b.dataset){$("imp").click();return}if("gocal" in b.dataset){V="tasks";TV="month";MM=0;$("app").classList.remove("open");render();return}
 if("lock" in b.dataset){sb.auth.signOut().then(()=>location.reload());return}
 if("exp" in b.dataset){exportXlsx();return}
-if(b.dataset.v){V=b.dataset.v;Q="";FS=FR="";$("q").value="";msg("");render();return}
+if(b.dataset.v){V=b.dataset.v;Q="";FS=FR="";$("q").value="";$("gs").value="";msg("");$("app").classList.remove("open");render();return}
 if(b.dataset.fsit!==undefined||b.dataset.fresp!==undefined){V="cases";Q="";$("q").value="";FS=b.dataset.fsit??"";FR=b.dataset.fresp??"";render();return}
-if(b.dataset.new){openForm(b.dataset.new);return}
+if(b.dataset.new){$("nm").hidden=true;openForm(b.dataset.new);return}
 if(b.dataset.tv){TV=b.dataset.tv;render();return}
 if(b.dataset.mm!==undefined){MM=b.dataset.mm=="0"?0:MM+ +b.dataset.mm;render();return}
 if(b.dataset.and){openAnd(b.dataset.and);return}
@@ -252,7 +322,7 @@ if("del" in b.dataset){if(b.dataset.armed){S[k]=S[k].filter(x=>x.id!=id);save(k)
 document.addEventListener("change",e=>{const s=e.target;if(s.id=="imp"&&s.files[0]){doImport(s.files[0]);s.value=""}if(s.dataset.showpw!==undefined)$("f_senha").type=s.checked?"text":"password";if(s.dataset.dok!==undefined){const c=S.cases.find(x=>x.id==s.dataset.dok);c.docs.find(x=>x.i==s.dataset.di).ok=s.checked;save("cases");render();openDocs(c.id)}if(s.id=="fs"){FS=s.value;render()}if(s.id=="fr"){FR=s.value;render()}});
 $("q").oninput=e=>{Q=e.target.value.toLowerCase();render()};
 $("fsv").onclick=submit;$("fx").onclick=()=>$("d").close();$("d2x").onclick=()=>$("d2").close();
-render();boot();
+setupTop();render();boot();
 </script>
 </body>
 </html>
